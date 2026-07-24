@@ -4,8 +4,24 @@
 
 // 1. CREATE FUNCTION HERE
 // This function takes two parameters: the original fee amount and the student's test score.
+let originalFeeAmount = prompt("Please enter your fees:");
+let studentTestScore = prompt("Please enter your test score:");
+function getScholarship(originalFeeAmount, studentTestScore){
+    originalFeeAmount = Number(originalFeeAmount);
+studentTestScore = Number(studentTestScore);
+ if(studentTestScore >= 90){
+    let discountedFee = originalFeeAmount-(originalFeeAmount * 0.5);
+    alert(`After a 50% discount, your new fee is${discountedFee}`);
+   }else if (studentTestScore >= 75){
+    alert(`After a 20% discount, your new fess is: ${originalFeeAmount-(originalFeeAmount * 0.2)}`);
+   } else {
+    alert(`Your school fees stays the same: ${originalFeeAmount} since you scored less than 75% in your test score`);
+   }
+}
 
-    
+getScholarship(originalFeeAmount, studentTestScore)
+
+
     // Step A: Convert parameters to numbers to prevent math bugs
     
 
@@ -14,7 +30,7 @@
     // - If score is 75 or above, they get a 20% discount (Subtract fee * 0.20)
     // - If score is below 75, they get 0% discount (Fee stays the same)
 
-   
+  
 
     // TASK 2: Use string interpolation backticks (``) to alert the final result to the screen.
     // Example message: "Based on your score of 95%, your final discounted fee is $500!"
