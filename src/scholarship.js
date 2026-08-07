@@ -19,7 +19,7 @@ studentTestScore = Number(studentTestScore);
    }
 }
 
-getScholarship(originalFeeAmount, studentTestScore)
+getScholarship(originalFeeAmount, studentTestScore)  
 
 
     // Step A: Convert parameters to numbers to prevent math bugs
